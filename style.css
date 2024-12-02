@@ -1,0 +1,169 @@
+:root{
+--Strongcyan: hsl(172, 67%, 45%);
+--Verydarkcyan: hsl(183, 100%, 15%);
+--Darkgrayishcyan: hsl(186, 14%, 43%);
+--Grayishcyan: hsl(184, 14%, 56%);
+--Lightgrayishcyan: hsl(185, 41%, 84%);
+--Verylightgrayishcyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+@font-face {
+    font-family: 'cairo';
+    src: url(Space_Mono/SpaceMono-Bold.ttf);
+}
+@font-face {
+    font-family: 'bolditalic';
+    src: url(Space_Mono/SpaceMono-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'italic';
+    src: url(Space_Mono/SpaceMono-Italic.ttf);
+}
+@font-face {
+    font-family: 'regular';
+    src: url(Space_Mono/SpaceMono-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'cairo','italic', 'regular', 'bolditalic';
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Lightgrayishcyan);
+}
+body header{
+    text-align: center;
+    width: 50%;
+    margin: 30px auto;
+}
+body header h1{
+    color: var(--Darkgrayishcyan);
+    letter-spacing: 10px;
+}
+body main{
+    background-color: var(--White);
+    height: 110vh;
+    padding: 30px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+body main .left label{
+    color: var(--Darkgrayishcyan);
+    display: block;
+    margin-bottom: 5px ;
+}
+body main .left .bill,body main .left .people{
+    position: relative;
+    margin: 15px 0px;
+}
+body main .left .bill input ,body main .left .people input{
+    width: 100%;
+    border: none;
+    background-color: var(--Verylightgrayishcyan);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: right;
+}
+body main .left .bill img,body main .left .people img{
+    position: absolute;
+    left: 15px;
+    z-index: 10;
+    top: 45px;
+}
+body main .left .tip .pos-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body main .left .tip .pos-buttons .top, body main .left .tip .pos-buttons .bottom{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+body main .left .tip .pos-buttons .bottom #custom{
+    width: 100%;
+    height: 50px;
+    background-color: var(--Verylightgrayishcyan);
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    margin: 5px 0px;
+}
+body main .left .tip .pos-buttons button{
+    margin: 5px 0px;
+    background-color: var(--Verydarkcyan);
+    color: var(--White);
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+body main .right{
+    background-color: var(--Verydarkcyan);
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+}
+body main .right .tip-amount,body main .right .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+}
+body main .right .tip-amount :first-child ,body main .right .total :first-child{
+    color: var(--White);
+}
+body main .right span{
+    color: var(--Grayishcyan);
+}
+body main .right .tip-price,body main .right .total-price{
+    color: var(--Strongcyan);
+    font-size: 30px;
+}
+body main .right #reset{
+    width: 100%;
+    background-color: var(--Strongcyan);
+    padding: 12px;
+    color: var(--Verydarkcyan);
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+}
+@media (min-width:1000px){
+    body header{
+        margin-bottom: 120px;
+    }
+    body main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    body main .left, body main .right{
+        width: 48%;
+    }
+    body main .right #reset{
+        margin-top: 150px;
+        background-color: var(--Darkgrayishcyan);
+    }
+    body main .left .tip .pos-buttons{
+        display: block;
+    }
+    body main .left .tip .pos-buttons .top,body main .left .tip .pos-buttons .bottom{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    body main .left .tip .pos-buttons button, body main .left .tip .pos-buttons #custom{
+        width: 90%;
+        margin: 10px;
+    }
+}
